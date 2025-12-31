@@ -2,6 +2,8 @@
 
 Service that monitors Pyth Network price feeds and automatically updates on-chain oracles based on deviation thresholds and heartbeat intervals.
 
+**NOTE**: This was created as a backup for some price feeds we used at Impermax Finance, specifically for less popular tokens that didn't have Chainlink support. The Pyth feeds we used were usually maintained by the teams or paid external services like keeper, gelato, etc. so this served as a backup to ensure prices were always updated.
+
 ## Installation
 
 ```bash
@@ -48,16 +50,10 @@ Edit `config.json` with your settings:
 
 ### 2. Set Environment Variable
 
-The private key is loaded from an environment variable (never stored in config):
+Add private key to `.env`
 
 ```bash
-export PRIVATE_KEY=your_private_key_here
-```
-
-Or create a `.env` file:
-
-```
-PRIVATE_KEY=your_private_key_here
+cp .env.example .env
 ```
 
 ## Usage
