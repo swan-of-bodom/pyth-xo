@@ -1,0 +1,60 @@
+{
+  "pyth_hermes_url": "https://hermes.pyth.network",
+  "poll_interval_seconds": 30,
+  "networks": [
+    {
+      "name": "Base",
+      "chain_id": 8453,
+      "rpc_url": "https://mainnet.base.org",
+      "pyth_contract": "0x8250f4aF4B972684F7b336503E2D6dFeDeB1487a",
+      "native_feed_id": "ETH_FEED_ID",
+      "block_explorer": "https://basescan.org"
+    },
+    {
+      "name": "Ethereum",
+      "chain_id": 1,
+      "rpc_url": "https://eth.llamarpc.com",
+      "pyth_contract": "0x4305FB66699C3B2702D4d05CF36551390A4c69C6",
+      "native_feed_id": "ETH_FEED_ID",
+      "block_explorer": "https://etherscan.io"
+    },
+    {
+      "name": "Unichain",
+      "chain_id": 1301,
+      "rpc_url": "https://sepolia.unichain.org",
+      "pyth_contract": "0xA2aa501b19aff244D90cc15a4Cf739D2725B5729",
+      "native_feed_id": "ETH_FEED_ID",
+      "block_explorer": "https://sepolia.uniscan.xyz"
+    }
+  ],
+  "feeds": [
+    {
+      "price_feed_id": "ff61491a931112ddf1bd8147cd1b641375f79f5825126d665480874634fd0ace",
+      "symbol": "ETH/USD",
+      "deviation_threshold": 0.5,
+      "heartbeat_seconds": 14400,
+      "networks": ["Base"]
+    },
+    {
+      "price_feed_id": "e62df6c8b4a85fe1a67db44dc12de5db330f7ac66b72dc658afedf0f4a415b43",
+      "symbol": "BTC/USD",
+      "deviation_threshold": 0.5,
+      "heartbeat_seconds": 14400,
+      "networks": ["Base", "Unichain"]
+    },
+    {
+      "price_feed_id": "eaa020c61cc479712813461ce153894a96a6c00b21ed0cfc2798d1f9a9e9c94a",
+      "symbol": "USDC/USD",
+      "deviation_threshold": 0.1,
+      "heartbeat_seconds": 14400,
+      "networks": ["Base", "Unichain", "Ethereum"]
+    },
+    {
+      "price_feed_id": "2b89b9dc8fdf9f34709a5b106b472f0f39bb6ca9ce04b0fd7f2e971688e2e53b",
+      "symbol": "USDT/USD",
+      "deviation_threshold": 0.1,
+      "heartbeat_seconds": 14400,
+      "networks": ["Unichain"]
+    }
+  ]
+}
